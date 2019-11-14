@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://github.com/lilian59480/WSEM5/friends/ontology#"
+     xml:base="http://github.com/lilian59480/WSEM5/friends/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://github.com/lilian59480/WSEM5/friends/ontology#">
+    <owl:Ontology rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology">
+        <owl:imports rdf:resource="http://github.com/lilian59480/WSEM5/pizza/ontology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#follows -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#follows">
+        <owl:inverseOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#hasFriend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#hasFriend">
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <rdfs:range rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#hasIn -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#hasIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#isIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#isIn -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#isIn">
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#City"/>
+        <rdfs:range rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#likes -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#likes">
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <rdfs:range rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Likeable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#livesIn -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#livesIn">
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <rdfs:range rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#refersTo -->
+
+    <owl:ObjectProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#refersTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Referable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#age -->
+
+    <owl:DatatypeProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#age">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#firstName">
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#lastName">
+        <rdfs:domain rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#City -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#City">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Location"/>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:label xml:lang="fr">Ville</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Country -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Country">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Location"/>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:label xml:lang="fr">Pays</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Event -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Event">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Referable"/>
+        <rdfs:label xml:lang="fr">Evenement</rdfs:label>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Likeable -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Likeable">
+        <rdfs:label xml:lang="fr">Aimable</rdfs:label>
+        <rdfs:label xml:lang="en">Likeable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Location -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Location">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Referable"/>
+        <rdfs:label xml:lang="fr">Emplacement</rdfs:label>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Page -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Page">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Likeable"/>
+        <rdfs:label xml:lang="en">Page</rdfs:label>
+        <rdfs:label xml:lang="fr">Page</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Person -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Person">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <rdfs:label xml:lang="fr">Personne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Photo -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Photo">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Likeable"/>
+        <rdfs:label xml:lang="en">Photo</rdfs:label>
+        <rdfs:label xml:lang="fr">Photo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Referable -->
+
+    <owl:Class rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Referable">
+        <rdfs:label xml:lang="en">Referable</rdfs:label>
+        <rdfs:label xml:lang="fr">Referable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/pizza/ontology#Pizza -->
+
+    <rdf:Description rdf:about="http://github.com/lilian59480/WSEM5/pizza/ontology#Pizza">
+        <rdfs:subClassOf rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Referable"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Cheesy_Pizza_Page -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Cheesy_Pizza_Page">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Page"/>
+        <refersTo rdf:resource="http://github.com/lilian59480/WSEM5/pizza/ontology#Thick_Cheesy"/>
+        <rdfs:label>Cheesy Pizza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#France -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#France">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Country"/>
+        <rdfs:label>France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Jean_Dupont -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Jean_Dupont">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <hasFriend rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Pierre_Durand"/>
+        <likes rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Cheesy_Pizza_Page"/>
+        <likes rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Main_Square"/>
+        <likes rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Paris"/>
+        <livesIn rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Paris_France"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+        <firstName>Jean</firstName>
+        <lastName>Dupont</lastName>
+        <rdfs:label>Jean Dupont</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Main_Square -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Main_Square">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Event"/>
+        <rdfs:label>Main Square Festival</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Paris -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Paris">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Page"/>
+        <refersTo rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Paris_France"/>
+        <rdfs:label>Paris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Paris_France -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Paris_France">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#City"/>
+        <isIn rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#France"/>
+        <rdfs:label>Paris, France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Photo_Main_Square_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Photo_Main_Square_2017">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Photo"/>
+        <refersTo rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Main_Square"/>
+        <rdfs:label>Photo du Main Square 2017</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://github.com/lilian59480/WSEM5/friends/ontology#Pierre_Durand -->
+
+    <owl:NamedIndividual rdf:about="http://github.com/lilian59480/WSEM5/friends/ontology#Pierre_Durand">
+        <rdf:type rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Person"/>
+        <hasFriend rdf:resource="http://github.com/lilian59480/WSEM5/friends/ontology#Jean_Dupont"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
+        <firstName>Pierre</firstName>
+        <lastName>Durand</lastName>
+        <rdfs:label>Pierre Durand</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
